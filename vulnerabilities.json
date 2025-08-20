@@ -1,0 +1,5 @@
+{
+  "weak_tls_versions": ["0x0300", "0x0301", "0x0302"],
+  "weak_cipher_suites": ["0x0000", "0x0016", "0x0035"],
+  "known_bad_snis": ["torproject.org", "discordcdn.download"]
+}
