@@ -7,8 +7,10 @@ interface = 'eth0'
 tls_packets = pyshark.LiveCapture(interface=interface, display_filter='tls')
 
 
-vuln_path = os.path.join('..', 'json', 'vulnerabilities.json')
-with open(vuln_path) as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+vuln_path = os.path.join(BASE_DIR, "vulnerabilities.json")
+
+with open(vuln_path, "r") as f:
     vuln_data = json.load(f)
 
 
